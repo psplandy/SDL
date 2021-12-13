@@ -312,6 +312,8 @@ KMSDRM_FBDestroyCallback(struct gbm_bo *bo, void *data)
     SDL_free(fb_info);
 }
 
+src_info.rotation = HAL_TRANSFORM_ROT_270;
+
 KMSDRM_FBInfo *
 KMSDRM_FBFromBO(_THIS, struct gbm_bo *bo)
 {
